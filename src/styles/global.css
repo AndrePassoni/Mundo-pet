@@ -29,7 +29,7 @@
 }
 
 body {
-    background-color: var(--background-tertiary);
+    background-color: #14151D;
     font: var(--p-sm);
     color: var(--content-secondary);
 }
@@ -37,4 +37,10 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.divisor {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-divisor);
 }
