@@ -1,0 +1,11 @@
+{
+  "schedules": [
+    {
+      "id": "1",
+      "pet": "Thor",
+      "owner": "Fernanda Costa",
+      "service": "Vacinação",
+      "when": "2024-05-20T09:00:00.000Z"
+    }
+  ]
+}
