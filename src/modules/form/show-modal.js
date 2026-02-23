@@ -1,6 +1,10 @@
-const showModal = document.querySelector(".modal")
+const modal = document.querySelector(".modal")
+const main = document.querySelector("main")
 const btnShow = document.querySelector(".btn-new")
+const filter = document.querySelector(".filter")
 
 btnShow.addEventListener("click", function () {
-    showModal.classList.remove("display")
+    modal.classList.remove("display")
+    main.classList.add("filter")
+    btnShow.classList.add("filter")
 })

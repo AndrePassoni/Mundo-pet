@@ -12,6 +12,7 @@ main {
     display: grid;
     max-width: 44.438rem;
     margin-inline: auto;
+    filter: none;
 
     & header {
         display: flex;
