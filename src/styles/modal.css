@@ -1,10 +1,41 @@
 .modal {
-    margin-top: 2rem;
     max-width: 30rem;
+    width: 100%;
     margin-inline: auto;
     background-color: var(--background-tertiary);
     padding: 2.5rem;
     border-radius: 0.75rem;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    scrollbar-width: thin; 
+    scrollbar-color: var(--border-primary) transparent;
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        margin-block: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--border-primary);
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: var(--border-secondary);
+    }
+
     & .modal-header {
         display: grid;
         gap: 0.25rem;
@@ -227,4 +258,8 @@
     & .btn.btn-schedule {
         margin-left: auto;
     }
+}
+
+.display {
+    display: none;
 }
