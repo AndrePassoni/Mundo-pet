@@ -24,7 +24,7 @@
             
             <div class="input" onclick="document.getElementById('date').showPicker()">
                 <img class="input__icon" src="./src/assets/Calendar.svg" alt="Calendário">
-                <input type="date" id="date" name="date" required>
+                <input type="date" id="date" name="date">
                 <img class="input__arrow" src="./src/assets/arrow-down.svg" alt="">
             </div>
         </header>
@@ -111,20 +111,26 @@
             <div class="inputs-wrapper">
                 <div class="input-wrapper">
                     <label for="name">Nome do tutor</label>
-                    <img src="./src/assets/User.svg" alt="">
-                    <input type="text" name="name" id="name" placeholder="Helena Souza">
+                    <div class="input-field">
+                        <img src="./src/assets/User.svg" alt="Ícone de usuário">
+                        <input type="text" name="name" id="name" placeholder="Helena Souza">
+                    </div>
                 </div>
 
                 <div class="input-wrapper">
                     <label for="pet-name">Nome do pet</label>
-                    <img src="./src/assets/Pet-Paw.svg" alt="">
-                    <input type="text" name="pet-name" id="pet-name" placeholder="Cheddar">
+                    <div class="input-field">
+                        <img src="./src/assets/Pet-Paw.svg" alt="Ícone de pata">
+                        <input type="text" name="pet-name" id="pet-name" placeholder="Cheddar">
+                    </div>
                 </div>
 
                 <div class="input-wrapper">
                     <label for="phone">Telefone</label>
-                    <img src="./src/assets/Phone.svg" alt="">
-                    <input type="tel" name="phone" id="phone" placeholder="(00) 0 0000-0000">
+                    <div class="input-field">
+                        <img src="./src/assets/Phone.svg" alt="Ícone de telefone">
+                        <input type="tel" name="phone" id="phone" placeholder="(00) 0 0000-0000">
+                    </div>
                 </div>
 
                 <div class="textarea-wrapper">
@@ -135,18 +141,21 @@
 
             <div class="schedule-wrapper">
                 <div class="date-wrapper">
-                    <label for="date">Data</label>
-                    <div class="input" onclick="document.getElementById('date').showPicker()">
+                    <label for="modal-date">Data</label>
+                    <div class="input" onclick="document.getElementById('modal-date').showPicker()">
                         <img class="input__icon" src="./src/assets/Calendar.svg" alt="Calendário">
-                        <input type="date" id="date" name="date" required>
+                        <input type="date" id="modal-date" name="modal-date">
                         <img class="input__arrow" src="./src/assets/arrow-down.svg" alt="">
                     </div>
                 </div>
 
                 <div class="hour-wrapper">
                     <label for="hour">Hora</label>
-                    <img src="./src/assets/Clock.svg" alt="">
-                    <input type="time" name="hour" id="hour">
+                    <div class="input-field" onclick="document.getElementById('hour').showPicker()">
+                        <img src="./src/assets/Clock.svg" alt="Ícone de relógio">
+                        <input type="time" name="hour" id="hour">
+                        <img class="input__arrow" src="./src/assets/arrow-down.svg" alt="Seta para baixo">
+                    </div>
                 </div>
             </div>
             <button class="btn btn-schedule" type="submit">agendar</button>
