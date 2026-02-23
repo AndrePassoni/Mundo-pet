@@ -1,0 +1,144 @@
+.modal {
+    margin-top: 2rem;
+    max-width: 30rem;
+    margin-inline: auto;
+    background-color: var(--background-tertiary);
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    & .modal-header {
+        display: grid;
+        gap: 0.25rem;
+        margin-bottom: 1.75rem;
+        & h2 {
+            font: var(--title);
+            color: var(--content-primary);
+        }
+
+        & p {
+            font: var(--p-md);
+        }
+    }
+
+    & .inputs-wrapper {
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        & label {
+            font: var(--label-md);
+            color: var(--content-primary);
+        }
+
+        & input {
+            padding: 0.75rem;
+            width: 100%;
+            border: 1px solid var(--border-primary);
+            background-color: transparent;
+            border-radius: 0.5rem;
+            font: var(--label-lg);
+            font-weight: 400;
+            color: var(--content-primary);
+
+            &:hover {
+                outline: none;
+                border: 1px solid var(--border-secondary);
+            }
+
+            &:focus-within {
+                outline: none;
+                border: 1px solid var(--content-brand);
+            }
+        }
+
+        & textarea {
+            padding: 0.75rem;
+            width: 100%;
+            border: 1px solid var(--border-primary);
+            background-color: transparent;
+            border-radius: 0.5rem;
+            font: var(--label-lg);
+            font-weight: 400;
+            color: var(--content-primary);
+
+            &:hover {
+                outline: none;
+                border: 1px solid var(--border-secondary);
+            }
+
+            &:focus-within {
+                outline: none;
+                border: 1px solid var(--content-brand);
+            }
+        }
+    }
+
+
+    & .schedule-wrapper {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.75rem;
+        & label {
+            font: var(--label-md);
+            color: var(--content-primary);
+        }
+        & .date-wrapper {
+            display: grid;
+            & .input {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background-color: transparent;
+                border: 1px solid var(--border-primary);
+                border-radius: 0.5rem;
+                padding: 0.75rem;
+                cursor: pointer;
+                max-width: 11.875rem;
+                max-height: 3rem;
+        
+                & .input__icon {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    flex-shrink: 0;
+                }
+        
+                & input[type="date"] {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: var(--content-tertiary);
+                    font: var(--label-lg);
+                    font-weight: 400;
+                    cursor: pointer;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    width: auto;
+                    min-width: 0;
+                    max-width: 11.875rem;
+                    max-height: 3rem;
+        
+                    &::-webkit-calendar-picker-indicator {
+                        display: none;
+                    }
+        
+                    &::-webkit-inner-spin-button,
+                    &::-webkit-clear-button {
+                        display: none;
+                    }
+                }
+        
+                & .input__arrow {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        & .time-wrapper {
+            display: grid;
+        }
+    }
+
+    & .btn.btn-schedule {
+        margin-left: auto;
+    }
+}

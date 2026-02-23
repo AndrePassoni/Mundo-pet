@@ -133,14 +133,17 @@ main {
     border: none;
     font: var(--label-lg);
     border-radius: 0.5rem;
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
     cursor: pointer;
     transition: 300ms;
-    box-shadow: 0 0 40px 0 rgba(146, 130, 250, 0.3);
 
     &:hover {
         background-color: var(--background-highlights);
     }
+}
+
+.btn-new {
+    position: fixed;
+    box-shadow: 0 0 40px 0 rgba(146, 130, 250, 0.3);
+    right: 2rem;
+    bottom: 2rem;
 }
