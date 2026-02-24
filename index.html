@@ -151,10 +151,13 @@
 
                 <div class="hour-wrapper">
                     <label for="hour">Hora</label>
-                    <div class="input-field" onclick="document.getElementById('hour').showPicker()">
-                        <img src="./src/assets/Clock.svg" alt="Ícone de relógio">
-                        <input type="time" name="hour" id="hour" required>
-                        <img class="input__arrow" src="./src/assets/arrow-down.svg" alt="Seta para baixo">
+                    <div class="input-field">
+                        <img src="./src/assets/Clock.svg" alt="Ícone de relógio" onclick="document.getElementById('hour').showPicker()">
+                        
+                        <select name="hour" id="hour" required>
+                            </select>
+                        
+                        <img class="input__arrow" src="./src/assets/arrow-down.svg" alt="Seta para baixo" onclick="document.getElementById('hour').showPicker()">
                     </div>
                 </div>
             </div>

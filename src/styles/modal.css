@@ -226,9 +226,10 @@
                     width: 1.25rem;
                     height: 1.25rem;
                     flex-shrink: 0;
+                    cursor: pointer;
                 }
 
-                & input[type="time"] {
+                & select {
                     flex: 1;
                     border: none;
                     background: transparent;
@@ -239,16 +240,21 @@
                     cursor: pointer;
                     appearance: none;
                     -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 100%;
+                }
 
-                    &::-webkit-calendar-picker-indicator {
-                        display: none !important;
-                        opacity: 0 !important;
-                        background: transparent !important;
-                    }
-
-                    &::-webkit-inner-spin-button,
-                    &::-webkit-clear-button {
-                        display: none !important;
+                & #hour:invalid {
+                    color: var(--content-secondary);
+                }
+    
+                & #hour option {
+                    color: #000;
+                    font: var(--label-lg);
+                    font-weight: 400;
+                    &:disabled {
+                        color: var(--content-secondary);
+                        font-style: italic;
                     }
                 }
             }
