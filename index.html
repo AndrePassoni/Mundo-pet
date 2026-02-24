@@ -113,7 +113,7 @@
                     <label for="name">Nome do tutor</label>
                     <div class="input-field">
                         <img src="./src/assets/User.svg" alt="Ícone de usuário">
-                        <input type="text" name="name" id="name" placeholder="Helena Souza">
+                        <input type="text" name="name" id="name" placeholder="Helena Souza" required>
                     </div>
                 </div>
 
@@ -121,7 +121,7 @@
                     <label for="pet-name">Nome do pet</label>
                     <div class="input-field">
                         <img src="./src/assets/Pet-Paw.svg" alt="Ícone de pata">
-                        <input type="text" name="pet-name" id="pet-name" placeholder="Cheddar">
+                        <input type="text" name="pet-name" id="pet-name" placeholder="Cheddar" required>
                     </div>
                 </div>
 
@@ -129,13 +129,13 @@
                     <label for="phone">Telefone</label>
                     <div class="input-field">
                         <img src="./src/assets/Phone.svg" alt="Ícone de telefone">
-                        <input type="tel" name="phone" id="phone" placeholder="(00) 0 0000-0000">
+                        <input type="tel" name="phone" id="phone" placeholder="(00) 0 0000-0000" required>
                     </div>
                 </div>
 
                 <div class="textarea-wrapper">
                     <label for="description">Descrição do serviço</label>
-                    <textarea name="description" id="description" cols="30" rows="3" placeholder="Banho e tosa"></textarea>
+                    <textarea name="description" id="description" cols="30" rows="3" placeholder="Banho e tosa" required></textarea>
                 </div>
             </div>
 
@@ -144,7 +144,7 @@
                     <label for="modal-date">Data</label>
                     <div class="input" onclick="document.getElementById('modal-date').showPicker()">
                         <img class="input__icon" src="./src/assets/Calendar.svg" alt="Calendário">
-                        <input type="date" id="modal-date" name="modal-date">
+                        <input type="date" id="modal-date" name="modal-date" required>
                         <img class="input__arrow" src="./src/assets/arrow-down.svg" alt="">
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                     <label for="hour">Hora</label>
                     <div class="input-field" onclick="document.getElementById('hour').showPicker()">
                         <img src="./src/assets/Clock.svg" alt="Ícone de relógio">
-                        <input type="time" name="hour" id="hour">
+                        <input type="time" name="hour" id="hour" required>
                         <img class="input__arrow" src="./src/assets/arrow-down.svg" alt="Seta para baixo">
                     </div>
                 </div>
