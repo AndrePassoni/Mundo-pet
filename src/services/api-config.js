@@ -1,4 +1,5 @@
 export const apiConfig = {
-    baseURL: "/api",
-    // baseURL: "http://localhost:3333",
+    baseURL: window.location.hostname === "localhost" 
+        ? "http://localhost:3333" 
+        : "/api",
 }
