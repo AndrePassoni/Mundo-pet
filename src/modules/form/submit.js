@@ -1,6 +1,7 @@
 import dayjs from "dayjs"
 import { scheduleNew } from "../../services/schedule-new.js"
 import { schedulesDay } from "../schedules/load.js"
+import { closeModal } from "./show-modal.js"
 
 const form = document.querySelector("form")
 const selectedDateModal = document.querySelector("#modal-date")
@@ -8,6 +9,8 @@ const ownerNameInput = document.querySelector("#name")
 const petNameInput = document.querySelector("#pet-name")
 const serviceInput = document.querySelector("#description")
 const hourInput = document.querySelector("#hour")
+const mainDateInput = document.querySelector("#date")
+const modal = document.querySelector(".modal")
 
 // Carrega a data atual e mostra no input Date
 selectedDateModal.value = dayjs(new Date()).format("YYYY-MM-DD")
@@ -43,12 +46,16 @@ form.onsubmit = async (event) => {
             when
         })
 
+        mainDateInput.value = selectedDateModal.value
+
         ownerNameInput.value = ""
         petNameInput.value = ""
         serviceInput.value = ""
         hourInput.value = ""
 
-        schedulesDay()
+        await schedulesDay()
+
+        closeModal()
 
     } catch (error) {
         console.error("Erro ao enviar o formulário:", error)

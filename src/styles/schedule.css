@@ -100,11 +100,28 @@ main {
             & ul {
                 padding: 2rem;
                 list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
                 & li {
                     display: flex;
+                    align-items: center;
+                    padding-bottom: 1.5rem;
+                    border-bottom: 1px solid var(--border-divisor);
+                    &:last-child {
+                        border-bottom: none;
+                        padding-bottom: 0;
+                    }
+
                     & .left {
+                        display: flex;
+                        align-items: center;
                         & strong:nth-child(2) {
                             margin-left: 1rem;
+                        }
+
+                        & span {
+                            margin-left: 0.25rem;
                         }
                     }
                     & strong {
@@ -112,8 +129,6 @@ main {
                         color: var(--content-primary);
                     }
                     & span:nth-child(2) {
-                        /* display: flex; */
-                        /* justify-content: center; */
                         margin-left: auto;
                         margin-right: auto;
                     }

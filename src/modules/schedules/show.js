@@ -24,7 +24,7 @@ export function schedulesShow({ dailySchedules }) {
             pet.textContent = schedule.pet || schedule.name
 
             const ownerName = document.createElement("span")
-            ownerName.textContent = `/ ${schedule.owner || "Tutor"}`
+            ownerName.textContent = ` / ${schedule.owner || "Tutor"}`
 
             leftContainer.append(time, pet, ownerName)
 

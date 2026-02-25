@@ -11,7 +11,7 @@ btnShow.addEventListener("click", function () {
 })
 
 // Função para fechar o modal
-function closeModal() {
+export function closeModal() {
     modal.classList.add("display")
     main.classList.remove("filter")
     btnShow.classList.remove("filter")

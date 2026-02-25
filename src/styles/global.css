@@ -36,7 +36,12 @@ body {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--content-tertiary);
+    transition: 0.2s ease;
+    &:hover {
+        text-decoration: underline;
+        color: var(--content-primary);
+    }
 }
 
 .divisor {

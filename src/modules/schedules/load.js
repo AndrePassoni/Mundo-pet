@@ -4,6 +4,10 @@ import { setupHourInput } from "../form/hours-load.js"
 
 const selectedDate = document.getElementById("date")
 
+selectedDate.addEventListener("change", () => {
+    schedulesDay()
+})
+
 export async function schedulesDay() {
     const date = selectedDate.value
 
