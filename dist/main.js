@@ -136,7 +136,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   apiConfig: () => (/* binding */ apiConfig)\n/* harmony export */ });\nvar apiConfig = {\n  baseURL: \"http://localhost:3333\"\n  // baseURL: \"/api\",\n};\n\n//# sourceURL=webpack://mundo-pet/./src/services/api-config.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   apiConfig: () => (/* binding */ apiConfig)\n/* harmony export */ });\nvar apiConfig = {\n  baseURL: window.location.hostname === \"localhost\" ? \"http://localhost:3333\" : \"/api\"\n};\n\n//# sourceURL=webpack://mundo-pet/./src/services/api-config.js?\n}");
 
 /***/ },
 
