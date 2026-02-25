@@ -34,7 +34,7 @@ form.onsubmit = async (event) => {
 
         const [hourString] = hour.split(":")
 
-        const when = dayjs(selectedDateModal.value).add(Number(hourString), "hour").toDate()
+        const when = dayjs(selectedDateModal.value).add(Number(hourString), "hour").format()
 
         const id = new Date().getTime().toString()
 
