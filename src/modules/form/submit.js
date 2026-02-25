@@ -7,6 +7,7 @@ const form = document.querySelector("form")
 const selectedDateModal = document.querySelector("#modal-date")
 const ownerNameInput = document.querySelector("#name")
 const petNameInput = document.querySelector("#pet-name")
+const phoneInput = document.querySelector("#phone")
 const serviceInput = document.querySelector("#description")
 const hourInput = document.querySelector("#hour")
 const mainDateInput = document.querySelector("#date")
@@ -50,6 +51,7 @@ form.onsubmit = async (event) => {
 
         ownerNameInput.value = ""
         petNameInput.value = ""
+        phoneInput.value = ""
         serviceInput.value = ""
         hourInput.value = ""
 

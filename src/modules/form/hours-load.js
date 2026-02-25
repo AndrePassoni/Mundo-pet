@@ -1,7 +1,7 @@
 import { openingHours } from "../../utils/opening-hours"
 import dayjs from "dayjs"
 
-export function setupHourInput(selectedDate) {
+export function setupHourInput({ date, dailySchedules }) {
     const hourSelect = document.querySelector("#hour")
     
     // Se o elemento não existir, paramos a execução aqui para evitar erros
@@ -18,8 +18,10 @@ export function setupHourInput(selectedDate) {
     defaultOption.selected = true
     hourSelect.appendChild(defaultOption)
 
+    const unavailableHours = dailySchedules.map((schedule) => dayjs(schedule.when).format("HH:mm"))
+
     // Verifica se a data selecionada é a atual
-    const isToday = dayjs(selectedDate).isSame(dayjs(), "day")
+    const isToday = dayjs(date).isSame(dayjs(), "day")
 
     // Pega a hora atual
     const currentHour = dayjs().hour()
@@ -32,11 +34,13 @@ export function setupHourInput(selectedDate) {
 
         const isPast = isToday && hourNumber <= currentHour
 
+        const isUnavailable = unavailableHours.includes(hour)
+
         const option = document.createElement("option")
         option.value = hour
         option.textContent = hour
 
-        if (isPast) {
+        if (isPast || isUnavailable) {
             option.disabled = true
         }
 
