@@ -9,6 +9,7 @@ import "./modules/form/submit.js"
 import "./modules/schedules/input-date.js"
 import "./modules/page-load.js"
 import "./modules/schedules/cancel.js"
+import "./modules/form/phone-input.js"
 
 import { setupHourInput } from "./modules/form/hours-load.js"
 
