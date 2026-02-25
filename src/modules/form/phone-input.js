@@ -1,7 +1,7 @@
 const phoneInput = document.querySelector("#phone")
 
 phoneInput.addEventListener("input", (event) => {
-    let value = event.target.replace(/\D/g, "")
+    let value = event.target.value.replace(/\D/g, "")
 
     // Limita a quantidade máxima de números
     value = value.substring(0, 11)
