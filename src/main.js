@@ -12,11 +12,20 @@ import "./modules/schedules/cancel.js"
 import "./modules/form/phone-input.js"
 
 import { setupHourInput } from "./modules/form/hours-load.js"
+import { scheduleFetchByDay } from "./services/schedule-fetch-by-day.js"
 
 const dateInput = document.querySelector("#modal-date")
 
-setupHourInput(dateInput.value)
+async function updateModalHours(date) {
+    if (!date) return;
+
+    const dailySchedules = await scheduleFetchByDay({ date })
+
+    setupHourInput({ date, dailySchedules })
+}
+
+updateModalHours(dateInput.value)
 
 dateInput.addEventListener("change", (event) => {
-    setupHourInput(event.target.value)
+    updateModalHours(event.target.value)
 })
