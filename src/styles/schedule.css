@@ -5,21 +5,20 @@
     height: 3rem;
     border-bottom-right-radius: 1rem;
     inset: 0;
-    margin-bottom: 0.875rem;
+    margin-bottom: 1.25rem;
 }
 
 main {
     display: grid;
-    max-width: 44.438rem;
+    max-width: 21.875rem;
     margin-inline: auto;
-    filter: none;
-
     & header {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        margin-bottom: 2rem;
         & .text-header {
-            margin-bottom: 2rem;
-            margin-right: auto;
+            margin-bottom: 0.75rem;
             & h1 {
                 font: var(--title);
                 color: var(--content-primary);
@@ -33,6 +32,7 @@ main {
         & .input {
             display: inline-flex;
             align-items: center;
+            margin-right: auto;
             gap: 0.5rem;
             background-color: transparent;
             border: 1px solid var(--border-primary);
@@ -77,16 +77,19 @@ main {
         }
     }
 
-    & .schedules{
+    & .schedules {
         display: grid;
         gap: 0.75rem;
         & .schedule-period {
             background-color: var(--background-tertiary);
             border-radius: 0.625rem;
             & header {
+                display: flex;
+                flex-direction: row;
                 padding: 0.875rem 1.25rem;
                 align-items: center;
                 gap: 0.75rem;
+                margin-bottom: 0;
                 & strong {
                     font: var(--label-lg);
                     color: var(--content-primary);
@@ -105,8 +108,8 @@ main {
                 gap: 1.5rem;
                 & li {
                     display: flex;
-                    align-items: center;
-                    padding-bottom: 1.5rem;
+                    flex-direction: column;
+                    padding-bottom: 0.75rem;
                     border-bottom: 1px solid var(--border-divisor);
                     &:last-child {
                         border-bottom: none;
@@ -116,6 +119,7 @@ main {
                     & .left {
                         display: flex;
                         align-items: center;
+                        flex-direction: row;
                         & strong:nth-child(2) {
                             margin-left: 1rem;
                         }
@@ -129,8 +133,11 @@ main {
                         color: var(--content-primary);
                     }
                     & span:nth-child(2) {
+                        margin-top: 0.25rem;
+                        margin-bottom: 0.5rem;
+                    }
+                    & a {
                         margin-left: auto;
-                        margin-right: auto;
                     }
                 }
             }
@@ -158,8 +165,59 @@ main {
 }
 
 .btn-new {
-    position: fixed;
+    margin-block: 3.5rem;
     box-shadow: 0 0 40px 0 rgba(146, 130, 250, 0.3);
-    right: 2rem;
-    bottom: 2rem;
+    margin-inline: auto;
+}
+
+@media (width >= 80em) {
+    .logo {
+        margin-bottom: 0.875rem;
+    }
+
+    main {
+        display: grid;
+        max-width: 44.438rem;
+        & header {
+            display: flex;
+            align-items: center;
+            & .text-header {
+                margin-bottom: 0;
+                margin-right: auto;
+            }
+
+            & .input {
+                margin-right: 0;
+            }
+
+        }
+
+        & .schedules {
+            & .schedule-period {
+                & ul {
+                    & li {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        padding-bottom: 1.5rem;
+                        & span:nth-child(2) {
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+
+                        & a {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-new {
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+        margin: 0;
+    }
 }
