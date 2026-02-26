@@ -32,6 +32,24 @@ body {
     background-color: #14151D;
     font: var(--p-sm);
     color: var(--content-secondary);
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        margin-block: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--border-primary);
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: var(--border-secondary);
+    }
 }
 
 a {

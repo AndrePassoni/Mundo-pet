@@ -1,16 +1,18 @@
 .logo {
+    position: fixed;
     background-color: var(--background-tertiary);
     padding: 0.75rem 1.25rem;
     width: 9.563rem;
     height: 3rem;
     border-bottom-right-radius: 1rem;
     inset: 0;
-    margin-bottom: 1.25rem;
+    z-index: 3;
 }
 
 main {
     display: grid;
     max-width: 21.875rem;
+    margin-top: 4.375rem;
     margin-inline: auto;
     & header {
         display: flex;
@@ -101,7 +103,7 @@ main {
             }
 
             & ul {
-                padding: 2rem;
+                padding-top: 1.75rem;
                 list-style: none;
                 display: flex;
                 flex-direction: column;
@@ -109,11 +111,12 @@ main {
                 & li {
                     display: flex;
                     flex-direction: column;
+                    margin-inline: 2rem;
                     padding-bottom: 0.75rem;
                     border-bottom: 1px solid var(--border-divisor);
                     &:last-child {
                         border-bottom: none;
-                        padding-bottom: 0;
+                        padding-bottom: 2rem;
                     }
 
                     & .left {
@@ -121,7 +124,7 @@ main {
                         align-items: center;
                         flex-direction: row;
                         & strong:nth-child(2) {
-                            margin-left: 1rem;
+                            margin-left: 0.75rem;
                         }
 
                         & span {
@@ -178,6 +181,7 @@ main {
     main {
         display: grid;
         max-width: 44.438rem;
+        margin-bottom: 3.5rem;
         & header {
             display: flex;
             align-items: center;
@@ -200,6 +204,13 @@ main {
                         align-items: center;
                         flex-direction: row;
                         padding-bottom: 1.5rem;
+
+                        & .left {
+                            & strong:nth-child(2) {
+                                margin-left: 1rem;
+                            }
+                        }
+
                         & span:nth-child(2) {
                             margin-left: auto;
                             margin-right: auto;
