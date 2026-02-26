@@ -1,8 +1,8 @@
+# Mundo Pet 🐾
+
 <div align="center">
   <img src="./preview.svg" alt="Mundo Pet Preview" width="100%">
 </div>
-
-# Mundo Pet 🐾
 
 > Appointment scheduler & manager for pet shops. Vanilla JS + JSON Server. Made with Rocketseat Fullstack course.
 
@@ -10,10 +10,11 @@
 
 **Mundo Pet** is a web application designed to help pet shops manage their daily appointments efficiently. Originally inspired by a barbershop scheduling system (HairDay), this project was fully adapted, redesigned, and implemented for the pet care context.
 
-The application allows users to schedule services for their pets, automatically blocking past hours and already booked slots. It uses a simulated backend with `json-server` to persist data, providing a complete frontend experience with real-world business logic.
+The application allows users to schedule services for their pets, automatically blocking past hours and already booked slots. It uses a simulated backend with `json-server` to persist data, providing a complete frontend experience with real-world business logic. 
 
 ## ✨ Features
 
+- **Fully Responsive Design:** The layout adapts perfectly to mobile, tablet, and desktop screens, providing a seamless user experience across all devices.
 - **Create Appointments:** Schedule a service providing the pet's name, owner's name, phone number, service type, and date/time.
 - **Dynamic Input Mask:** Automatic formatting for Brazilian phone numbers using Regex.
 - **Smart Time Slot Management:**
@@ -25,7 +26,7 @@ The application allows users to schedule services for their pets, automatically 
 
 ## 🚀 Technologies Used
 
-- **HTML5 & CSS3:** Semantic markup and custom styling.
+- **HTML5 & CSS3:** Semantic markup, responsive design (Media Queries), and custom styling.
 - **JavaScript (Vanilla):** Modular ES6+ for all frontend logic and DOM manipulation.
 - **Day.js:** Lightweight library for advanced date and time formatting.
 - **Webpack:** Frontend tooling and module bundling.
@@ -40,11 +41,19 @@ Appointments are saved in the `server.json` file following this exact structure:
   "id": "1",
   "pet": "Thor",
   "owner": "Fernanda Costa",
-  "phone": "(11) 9 8765-4321",
   "service": "Vacinação",
   "when": "2024-05-20T09:00:00-03:00"
 }
 ```
+
+## ☁️ Vercel Deployment & API Details
+
+This project is deployed on Vercel. Since Vercel's serverless environment has a **Read-Only** file system, standard `json-server` POST/DELETE requests to a physical `server.json` file would return a `500 Internal Server Error`.
+
+**The Solution:** The API is configured to run as a Serverless Function (`/api/server.js`) using `json-server` in **In-Memory mode**. The data is loaded as a JavaScript object, allowing the application to successfully perform POST and DELETE requests during the active session. *Note: Because it's in-memory on a serverless function, data changes will not persist permanently after the function goes cold.*
+
+The application dynamically routes API requests using:
+`window.location.hostname === "localhost" ? "http://localhost:3333" : "/api"`
 
 ## 🛠️ Getting Started
 
@@ -58,7 +67,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/AndrePassoni/mundo-pet.git
+git clone [https://github.com/AndrePassoni/mundo-pet.git](https://github.com/AndrePassoni/mundo-pet.git)
 ```
 
 2. Navigate to the project directory:
