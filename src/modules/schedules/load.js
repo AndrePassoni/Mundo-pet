@@ -15,6 +15,10 @@ export async function schedulesDay() {
 
     const dailySchedules = await scheduleFetchByDay({ date })
 
+    dailySchedules.sort((a, b) => {
+        return new Date(a.when) - new Date(b.when);
+    });
+
     schedulesShow({ dailySchedules })
     setupHourInput({ date, dailySchedules })
 }
